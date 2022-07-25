@@ -1,0 +1,10 @@
+Species	Common name	Classification	Farming Environment	Min. Temp	Max. Temp	Mean Temp	Temp Ref	Test
+Naso vlamingii	Bignose unicorn fish	Fish	Brackishwater	25.5	29	27.6	Aquamaps	none
+Crassostrea angulata	Portuguese cupped oyster	Mollusc		12.4	21.4	17.6	Aquamaps	unaccepted obis name
+Lutjanus goldiei	Papuan black snapper	Fish	Marine					low n
+Macrocystis pyrifera	Giant kelp	Algae	Marine					large n
+Nodipecten subnodosus	Giant lion's paw	Mollusc	Marine					none
+Macrocystis pyrifera	Giant kelp	Algae	Marine					duplicate record
+Acipenser nudiventris								singe occurence
+Pungitius pungitius	ninespine stickleback	Fish	Fresh					not marine
+Onchorhynchus tshawytscha	Chinook salmon	Fish	Marine	0.7	8	3.5	Aquamaps	none
