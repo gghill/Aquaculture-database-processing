@@ -1,4 +1,4 @@
-# Aquaculture-database-processing
+# Aquaculture database processing
 Organizing and processing global aquaculture data into models and visualizations
 
 This repo is working to develop a pipeline from a database of aquaculture species to models describing the ecological niche of these species of interest.
