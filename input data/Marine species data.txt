@@ -1,0 +1,329 @@
+Species	Common name	Classification	Farming Environment	Min. Temp	Max. Temp	Mean Temp	Temp Ref
+Acanthopagrus berda	Goldsilk seabream	Fish	Marine	21.6	29	27.8	Aquamaps
+Acanthopagrus bifasciatus	Twobar seabream	Fish	Marine	25	29.2	27.6	Aquamaps
+Acanthopagrus latus	Yellowfin seabream	Fish	Marine	21.7	28.5	27.4	Aquamaps
+Acanthopagrus schlegelii	Blackhead seabream	Fish	Both	13.1	25.4	23.7	Aquamaps
+Acetes japonicus	Akaimi paste shrimp	Crustacean	Brackishwater	20.5	29.1	28.2	Aquamaps
+Acipenser stellatus	Starry sturgeon	Fish	Brackishwater	7.6	15.9	13.1	Aquamaps
+Aequipecten opercularis	Queen scallop	Mollusc	Marine	7	15.9	10.1	Aquamaps
+Alaria esculenta	Badderlocks	Algae	Marine	-2	16		MarLIN
+Aliger gigas	Pink conch	Mollusc		25.3	28	27	Aquamaps
+Anadara broughtonii	Blood clam	Mollusc	Marine	19	29	28	Aquamaps
+Anadara tuberculosa	Black ark	Mollusc	Marine	24.3	29.1	27.5	Aquamaps
+Anarhichas lupus	Atlantic wolffish	Fish	Marine	0.8	12.1	7.8	Aquamaps
+Anguilla anguilla	European eel	Fish	Both	3	14.5	7.9	Aquamaps
+Anguilla australis	Shortfin eel	Fish	Brackishwater	4.3	9.1	5.3	Aquamaps
+Anguilla bicolor bicolor	Indonesian shortfin eel	Fish		26.5	29.1	28.3	Aquamaps
+Anguilla japonica	Japanese eel	Fish	Brackishwater	2.5	23.3	17	Aquamaps
+Apostichopus japonicus	Japanese sea cucumber	Echinoderm	Marine	8.6	19.7	15.2	Aquamaps
+Argopecten irradians	Atlantic Bay scallop	Mollusc		9.7	12.7	11.7	Aquamaps
+Argopecten ventricosus	Pacific calico scallop	Mollusc	Marine	11	28.5	24	Aquamaps
+Argyrosomus hololepidotus	Southern meagre	Fish		21.4	27.6	25.9	Aquamaps
+Argyrosomus japonicus	Japanese meagre	Fish	Both	16.7	27.8	25.3	Aquamaps
+Argyrosomus regius	Meagre	Fish	Both	13.3	19.4	15.3	Aquamaps
+Artemia salina	Brine shrimp	Crustacean	Both			23	Aquamaps
+Asaphis violascens	Pacific asaphis	Mollusc	Marine	13.3	19.4	15.3	Aquamaps
+Atherina boyeri	Big-scale sand smelt	Fish	Marine	13.9	21	18.3	Aquamaps
+Aulacomya ater	Cholga mussel	Mollusc	Marine	6.9	17.1	11.6	Aquamaps
+Bolbometopon muricatum	Green humphead parrotfish	Fish	Marine	25.3	29.1	28.2	Aquamaps
+Boleophthalmus pectinirostris	Great blue spotted mudskipper	Fish	Brackishwater	26	30		FishBase
+Bolinus brandaris	Purple dye murex	Mollusc	Marine	16.2	21.6	19.3	Aquamaps
+Callinectes sapidus	Blue crab	Crustacean	Brackishwater	12.3	28	24.4	Aquamaps
+Capsosiphon fulvescens		Algae	Marine				
+Carangoides malabaricus	Malabar trevally	Fish	Marine	22.6	28.4	27.2	Aquamaps
+Caranx hippos	Crevalle jack	Fish	Marine	16.5	27.9	24.8	Aquamaps
+Caranx ignobilis	Giant trevally	Fish	Marine	21.2	28.4	26.8	Aquamaps
+Caranx sexfasciatus	Bigeye trevalley	Fish	Marine	22.3	28.9	27.3	Aquamaps
+Carcinus aestuarii	Mediterranean shore crab	Crustacean	Brackishwater	13.4	19.4	15.4	Aquamaps
+Carcinus maenas	Green crab	Crustacean	Marine	7	12.7	9.6	Aquamaps
+Caulerpa racemosa	Coarse seagrape		Marine				
+Centropomus undecimalis	Common snook	Fish	Both	23.5	28.1	27.3	Aquamaps
+Centropristis striata	Black seabass	Fish	Brackishwater	10.8	24.9	23.6	Aquamaps
+Cerastoderma edule	Common cockle	Mollusc	Both	7.6	13.7	10.4	Aquamaps
+Cerastoderma glaucum	Olive green cockle	Mollusc	Both	7.3	18.3	10.5	Aquamaps
+Chaetodipterus faber	Atlantic spadefish	Fish	Marine	22.6	28	25.4	Aquamaps
+Chamelea gallina	Striped venus	Mollusc	Marine	8.4	18.9	11.6	Aquamaps
+Chanos chanos	Milkfish	Fish	Both	20.7	29.2	28.2	Aquamaps
+Chelonia mydas	Green sea turtle	Vertebrate	Brackishwater	15.7	28.9	26.7	Aquamaps
+Chlamys farreri	Farrer's scallop	Mollusc		9.6	23.3	17.9	Aquamaps
+Chlamys varia	Variegated scallop	Mollusc	Marine	11.6	16	13.8	Aquamaps
+Chondracanthus chamissoi	Yuyo	Algae	Marine				
+Cladosiphon okamuranus		Algae	Brackishwater				
+Codium fragile	Dead man's fingers	Algae	Marine				
+Concholepas concholepas	Chilean abalone	Mollusc	Marine			12	SeaLifeBase
+Coregonus lavaretus	Common whitefish	Fish	Both	5.8	12.5	9.5	Aquamaps
+Crassostrea angulata	Portuguese cupped oyster	Mollusc		12.4	21.4	17.6	Aquamaps
+Crassostrea belcheri	Lugubrious cupped oyster	Mollusc					
+Crassostrea corteziensis	Cortez oyster	Mollusc	Brackishwater	12.4	26.9	19	Aquamaps
+Crassostrea gigas	Pacific cupped oyster	Mollusc	Both	7.4	22.6	16	Aquamaps
+Crassostrea iredalei	Slipper cupped oyster	Mollusc	Marine			28	SeaLifeBase
+Crassostrea madrasensis	Indian backwater oyster	Mollusc	Both				
+Crassostrea rhizophorae	Mangrove cupped oyster	Mollusc	Both	26.2	28	27.3	Aquamaps
+Crassostrea rivularis	Suminoe oyster	Mollusc					
+Crassostrea sikamea	Kumamoto oyster	Mollusc					
+Crassostrea tulipa	West African mangrove oyster	Mollusc	Both	23	31		SeaLifeBase
+Crassostrea virginica	American cupped oyster	Mollusc	Both	7.7	27.5	23.5	Aquamaps
+Cromileptes altivelis	Humpback grouper	Fish	Both	25	29	28	Aquamaps
+Cyclina sinensis	Chinese venus	Mollusc	Marine	14.4	29.2	28.2	Aquamaps
+Decapterus macrosoma	Shortfin scad	Fish		22.1	28.6	27.3	Aquamaps
+Dentex dentex	Common dentex	Fish	Marine	13.3	21.1	18.1	Aquamaps
+Dentex gibbosus	Pink dentex	Fish	Marine	13	19.3	15.5	Aquamaps
+Dentex tumifrons	Yellowback seabream	Fish	Marine	8.1	21.9	18.2	Aquamaps
+Dicentrarchus labrax	European seabass	Fish	Both	7.3	19.5	10.7	Aquamaps
+Dicentrarchus punctatus	Spotted seabass	Fish	Both	13.3	20.7	17.3	Aquamaps
+Diplodus puntazzo	Sheephead bream	Fish	Marine	16	21.6	19.1	Aquamaps
+Diplodus sargus	White seabream	Fish	Both	15	24.1	18.8	Aquamaps
+Diplodus vulgaris	Common two-branded seabream	Fish	Both	15.9	21.6	18.8	Aquamaps
+Dunaliella salina		Algae	Marine				
+E. fuscoguttatus x E. lanceolatus	"Tiger-dragon grouper, hybrid"	Fish	Marine				
+Eleutheronema tetradactylum	Fourfinger threadfin	Fish	Both				
+Emmelichthys nitidus	Cape bonnetmouth	Fish		9.6	16.6	13.1	Aquamaps
+Ensis directus	Atl jackknife/ Atl. Razor clam	Mollusc	Marine	41	26	9.7	Aquamaps
+Ensis ensis	Pod razor shell	Mollusc	Brackishwater				
+Enteromorpha prolifera	Dark green nori	Algae	Marine				
+Epinephelus akaara	Hong Kong grouper	Fish	Marine	16	25.5	21.6	Aquamaps
+Epinephelus areolatus	Areolate grouper	Fish	Marine	22.4	28.4	26.9	Aquamaps
+Epinephelus awoara	Yellow grouper	Fish		16.2	25.6	22.5	Aquamaps
+Epinephelus chlorostigma	Brownspotted grouper	Fish		19.1	28.2	25.8	Aquamaps
+Epinephelus coioides	Orange-spotted grouper	Fish	Both	24.4	29.1	28.1	Aquamaps
+Epinephelus corallicola	Coral grouper	Fish		25.5	29.2	28.6	Aquamaps
+Epinephelus fuscoguttatus	Brown-marbled grouper	Fish	Both	25.4	29.1	28.2	Aquamaps
+Epinephelus lanceolatus	Giant grouper	Fish	Both	24.3	29.1	28.1	Aquamaps
+Epinephelus malabaricus	Malabar grouper	Fish	Both	24.3	29.1	28	Aquamaps
+Epinephelus septumfasciatus	Convict grouper	Fish	Marine	26.8	29.1	28.3	Aquamaps
+Epinephelus tauvina	Greasy grouper	Fish	Both	19.6	28.2	26.2	Aquamaps
+Epinephelus tukula	Potato grouper	Fish	Marine	16.8	27.7	23.9	Aquamaps
+Euchema denticulatum		Algae	Marine				
+Gadus morhua	Atlantic cod	Fish	Marine	0.5	10.3	6.6	Aquamaps
+Gelidium amansii	Umutgasari	Algae	Marine				
+Gnathanodon speciosus	Golden trevally	Fish	Marine				
+Gomphina veneriformis		Mollusc	Marine	14.5	25.3	20.5	Aquamaps
+Gracilaria gracilis		Algae	Marine				
+Gracilaria longissima		Algae	Marine				
+Gracilaria verrucosa	Warty gracilaria	Algae	Both				
+Haliotis discus	Japanese abalone	Mollusc	Marine				
+Haliotis diversicolor	Small abalone	Mollusc		19.5	26.9	23.6	Aquamaps
+Haliotis iris	Rainbow abalone	Mollusc	Marine				
+Haliotis midae	South African abalone	Mollusc	Marine	17	22.2	19.9	Aquamaps
+Haliotis rufescens	Red abalone	Mollusc	Marine	8	18		SeaLifeBase
+Haliotis tuberculata	Green ormer	Mollusc	Marine	7	18.9	10.5	Aquamaps
+Halocynthia roretzi	Sea pineapple	Chordata	Marine				
+Helicolenus dactylopterus	Balackbelly rosefish	Fish		4	18.1	10.6	Aquamaps
+Hiatula diphos	Purple clam	Mollusc	Marine	19.1	29.2	28.4	Aquamaps
+Hippoglossus hippoglossus	Atlantic halibut	Fish	Marine	0.4	7.9	3.4	Aquamaps
+Hippopus hippopus	Horse hoof clam	Mollusc	Marine	25.6	29.3	28.7	Aquamaps
+Holothuria scabra	Sandfish	Echinoderm	Both	25.8	29.3	28.6	Aquamaps
+Huso huso	Beluga sturgeon	Fish	Brackishwater	7.7	15.6	9.1	Aquamaps
+Kappaphycus alvarezii	Elkhorn sea moss	Algae	Both				
+Konosirus punctatus	Dotted gizzard shard	Fish	Marine	16.1	23.8	20.3	Aquamaps
+Laminaria digitata	Oarweed	Algae	Marine				
+Laminaria japonica	Japanese kelp	Algae	Marine				
+Larimichthys croceus	Large yellow croaker	Fish	Marine	20.8	24.7	22.8	Aquamaps
+Larkinia grandis	Grand ark	Mollusc	Marine				
+Lateolabrax japonicus	Japanese seabass	Fish	Both	12.7	26.3	22.4	Aquamaps
+Lates calcarifer	Barramundi	Fish	Both	25	29.1	28.3	Aquamaps
+Leteolabrax japonicus	Japanese seabass	Fish		12.7	26.3	22.4	Aquamaps
+Lethrinus miniatus	Trumpet emporer	Fish	Marine	24.7	29.3	28.4	Aquamaps
+Leukoma staminae	Pacific littleneck clam	Mollusc	Marine	7.3	15.7	9.8	Aquamaps
+Liza ramada	Thinlip grey mullet	Fish	Brackishwater	9.7	20.1	11.8	Aquamaps
+Liza vaigiensis	Squaretail mullet	Fish	Brackishwater	25.3	29.3	28.5	Aquamaps
+Loxechinus albus	Chilean sea urchin	Echinoderm		5.1	14.4	7.5	Aquamaps
+Lutjanus argentimaculatus	Mangrove red snapper	Fish	Both	24.3	29.1	28	Aquamaps
+Lutjanus bohar	Two-spotted red snapper	Fish	Brackishwater	24.5	29	28	Aquamaps
+Lutjanus erythropterus	Crimson snapper	Fish	Both	25.3	29.1	28.2	Aquamaps
+Lutjanus goldiei	Papuan black snapper	Fish	Marine				
+Lutjanus guttatus	Spotted rose snapper	Fish	Marine	22.3	29.1	26.2	Aquamaps
+Lutjanus johnii	John's snapper	Fish	Both	25	29.1	28.2	Aquamaps
+Lutjanus malabaricus	Malabar blood snapper	Fish	Marine	23.8	28.6	27.5	Aquamaps
+Lutjanus purpureus	Southern red snapper	Fish	Marine	21.2	26.5	24.8	Aquamaps
+Lutjanus russelli	Russell's snapper	Fish	Marine	24.4	29.1	28	Aquamaps
+Lutjanus sebae	Red emperor	Fish	Marine	22.9	28.5	27.1	Aquamaps
+Macrocystis integrifolia	Giant perennial kelp	Algae	Marine				
+Macrocystis pyrifera	Giant kelp	Algae	Marine				
+Mactra glabrata	Smooth mactra	Mollusc	Marine	13.7	21.7	18.2	Aquamaps
+Mactra veneriformis	Globose clam	Mollusc	Marine	17.8	25.4	22.4	Aquamaps
+Magallana rivularis	Suminoe oyster	Mollusc					
+Maja squinado	European spider crab	Crustacean	Marine	8.2	20.1	11.1	Aquamaps
+Megalops atlanticus	Atlantic tarpon	Fish	Marine	19.6	28	27	Aquamaps
+Melanogrammus aeglefinus	Haddock	Fish	Marine	1.4	12.1	8.4	Aquamaps
+Melicertus kerathurus	Caramote prawn	Crustacean		15.2	21.6	19	Aquamaps
+Mercenaria mercenaria	Northern quahog	Mollusc	Marine	8.8	23.7	13.2	Aquamaps
+Meretrix lusoria	Japanese hard clam	Mollusc	Both	15.1	25.3	21	Aquamaps
+Meristotheca senegalense		Algae	Marine				
+Metapenaeus ensis	Greasyback shrimp	Crustacean	Brackishwater	24.2	29.1	28.1	Aquamaps
+Metapenaeus macleayi	Eastern school shrimp	Crustacean	Brackishwater	17.2	24.3	22.4	Aquamaps
+Metapenaeus monoceros	Speckled shrimp	Crustacean	Brackishwater	25.2	29.3	27.8	Aquamaps
+Metasepia tullbergi	Paintpot cuttlefish	Mollusc	Brackishwater	22.8	28.2	27.3	Aquamaps
+Micropogonias furnieri	Whitemouth croaker	Fish	Brackishwater	16.5	28	26.6	Aquamaps
+Miichthys miiuy	Mi-iuy croaker	Fish	Marine	13	24.8	21.9	Aquamaps
+Mizuhopecten yessoensis	Yesso scallop	Mollusc		1	18.5	5.1	Aquamaps
+Monostroma nitidum	Green nori	Algae	Marine				
+Morone chrysops x M. saxatilis	Striped bass X white bass	Fish	Marine				
+Morone saxatilis	Striped bass	Fish	Both	1	23.5	9.3	Aquamaps
+Mugil cephalus	Flathead grey mullet	Fish	Both	11.3	27.9	23.2	Aquamaps
+Mugil liza	Lebranche mullet	Fish	Brackishwater	22.5	27.7	25.5	Aquamaps
+Muraenesox cinereus	Daggertooth pike conger	Fish	Marine	11.6	23.2	17.4	Aquamaps
+Mya arenaria	Sand gaper	Mollusc	Marine	6.4	14.5	10.9	Aquamaps
+Mycteroperca bonaci	Black grouper	Fish	Marine				
+Mytilus chilensis	Chilean mussel	Mollusc	Marine			10	SeaLifeBase
+Mytilus coruscus	Korean mussel	Mollusc	Marine	12.3	21.4	18.4	Aquamaps
+Mytilus edulis	Blue mussel	Mollusc	Marine	4.4	16.1	10.2	Aquamaps
+Mytilus galloprovincialis	Mediterranean mussel	Mollusc	Both	5.5	18	11	Aquamaps
+Mytilus planulatus	Australian mussel	Mollusc	Marine	8.7	17.1	12.6	Aquamaps
+Mytilus platensis	River Plata mussel	Mollusc	Marine			14	SeaLifeBase
+Naso vlamingii	Bignose unicorn fish	Fish	Brackishwater	25.5	29	27.6	Aquamaps
+Nodipecten subnodosus	Giant lion's paw	Mollusc	Marine				
+Onchorhynchus tshawytscha	Chinook salmon	Fish	Marine	0.7	8	3.5	Aquamaps
+Oncorhynchus gorbuscha	Pink salmon	Fish	Marine	0.5	9.3	3.3	Aquamaps
+Oncorhynchus keta	Chum salmon	Fish	Marine	1.1	8.3	3.3	Aquamaps
+Oncorhynchus kisutch	Coho salmon	Fish	Marine	1	8.9	3.9	Aquamaps
+Oncorhynchus masou	Masu salmon	Fish	Marine	0.3	16.5	3.3	Aquamaps
+Oncorhynchus mykiss	Rainbow trout	Fish	Both	1.3	10	5.4	Aquamaps
+Oncorhynchus nerka	Sockeye salmon	Fish	Marine	1	8.4	4.2	Aquamaps
+Oplegnathus fasciatus	Striped beakfish	Fish	Marine	16.1	25.2	22	Aquamaps
+Ostrea chilensis	Chilean flat oyster	Mollusc	Marine			24	SeaLifeBase
+Ostrea conchaphila		Mollusc	Marine	24.6	28.7	27.5	Aquamaps
+Ostrea edulis	European flat oyster	Mollusc	Both	7.1	11.9	9.7	Aquamaps
+Ostrea lurida	Olympia flat oyster	Mollusc		8.5	11.7	9.8	Aquamaps
+Pagellus bogaraveo	Blackspot seabream	Fish	Marine	6.9	14.9	11.2	Aquamaps
+Pagellus erythrinus	Common Pandora	Fish	Marine	12.2	21	17.2	Aquamaps
+Pagrus auratus	Australasian snapper	Fish	Marine	14	25.2	17.4	Aquamaps
+Pagrus auratus	Silver seabream	Fish	Both	14	25.2	17.4	Aquamaps
+Pagrus auriga	Redbanded seabream	Fish	Marine	14.3	27.5	19	Aquamaps
+Pagrus caeruleostictus	Bluespotted seabream	Fish	Marine	13.3	25.2	17.5	Aquamaps
+Pagrus major	Japanese seabream	Fish	Both	17	24.4	21.8	Aquamaps
+Pagrus pagrus	Red porgy	Fish	Marine	15.8	27.8	24.1	Aquamaps
+Palaemon adspersus	Baltic prawn	Crustacean	Brackishwater	8.2	20.1	14.2	Aquamaps
+Palaemon serratus	Common prawn	Crustacean	Brackishwater	9.1	18.9	11.3	Aquamaps
+Palaemonetes varians	Atlantic ditch shrimp	Crustacean	Brackishwater				
+Palmaria palmata	Dulse	Algae	Marine				
+Panopea generosa	Pacific geoduck	Mollusc	Marine	8.3	12.8	9.8	Aquamaps
+Panulirus argus	Caribbean spiny lobster	Crustacean	Marine	23.7	28	26.7	Aquamaps
+Panulirus japonicus	Japanese spiny lobster	Crustacean	Both	19.3	25.3	22	Aquamaps
+Panulirus polyphagus	Mud spiny lobster	Crustacean	Both	27	29.1	28.3	Aquamaps
+Paphia gallus	Rooster venus	Mollusc	Marine	24.7	29.1	28.1	Aquamaps
+Paracentrotus lividus	Purple sea urchin	Echinoderm	Marine	7.4	20.1	11.8	Aquamaps
+Paralichthys microps	Small-eyed flounder	Fish					
+Paralichthys olivaceus	Bastard halibut	Fish	Both	8.6	25	18.8	Aquamaps
+Patinopecten yessoensis	Yesso scallop	Mollusc	Marine			17	SeaLifeBase
+Pecten fumatus	Southern Australia scallop	Mollusc	Marine	15	26.4	18.3	Aquamaps
+Pecten jacobaeus	Mediterranean scallop	Mollusc	Marine	15.9	21.6	18.7	Aquamaps
+Pecten maximus	Great Atlantic scallop	Mollusc	Marine	7.3	12.5	10.3	Aquamaps
+Penaeus chinensis	Chinese white shrimp	Crustacean	Brackishwater	10.6	20.7	15.6	Aquamaps
+Penaeus esculentus	Brown tiger prawn	Crustacean	Brackishwater	24.6	28.2	26.7	Aquamaps
+Penaeus indicus	Indian white prawn	Crustacean	Both	25.5	29.1	28.3	Aquamaps
+Penaeus japonicus	Kuruma prawn	Crustacean	Both	21.8	29.1	28	Aquamaps
+Penaeus kerathurus	Caramote prawn	Crustacean	Brackishwater	15.2	21.6	19	Aquamaps
+Penaeus merguiensis	Banana prawn	Crustacean	Both			28	SeaLifeBase
+Penaeus monodon	Giant tiger prawn	Crustacean	Both	24.7	29.1	28.1	Aquamaps
+Penaeus penicillatus	Redtail prawn	Crustacean	Brackishwater	20.4	26.1	23.6	Aquamaps
+Penaeus plebejus	Eastern king prawn	Crustacean	Brackishwater	17.7	27.2	24.1	Aquamaps
+Penaeus schmitti	Southern white shrimp	Crustacean	Brackishwater				
+Penaeus semisulcatus	Green tiger prawn	Crustacean	Brackishwater	21.6	29.1	28	Aquamaps
+Penaeus setiferus	Northern white shrimp	Crustacean	Brackishwater	15.3	27.3	24.3	Aquamaps
+Penaeus stylirostris	Blue shrimp	Crustacean	Both			25	SeaLifeBase
+Penaeus vannamei	Whiteleg shrimp	Crustacean	Both	23.3	29	27.6	Aquamaps
+Perna canaliculus	New Zealand mussel	Mollusc	Marine				
+Perna perna	South American rock mussel	Mollusc	Marine	14.8	27.8	24.9	Aquamaps
+Perna viridis	Brown mussel	Mollusc	Both	24.8	29.2	28.5	Aquamaps
+Pinctada fucata	Japanese pearl oyster	Mollusc		17.9	28.9	27.1	Aquamaps
+Pinctada margaritifera	Pacific pearl-oyster	Mollusc	Marine	23.8	29	27.6	Aquamaps
+Pinctada maxima	Silverlip pearl oyster	Mollusc		24.4	29.1	28.2	Aquamaps
+Placopecten magellanicus	American sea scallop	Mollusc		1.9	11.7	8.5	Aquamaps
+Planiliza haematocheilus	So-iuy mussel	Chordata	Brackishwater				
+Platax orbicularis	Orbicular batfish	Fish	Marine	24.9	29.2	28.5	Aquamaps
+Platichthys flesus	European flounder	Fish	Marine	7.2	14.2	10.2	Aquamaps
+Plectropomus maculatus	Spotted coralgrouper	Fish	Both	26.1	28.8	27.8	Aquamaps
+Pleurogrammus azonus	Okhotsk atka mackerel	Fish	Marine	2.7	20.5	12.8	Aquamaps
+Pollachius pollachius	Atlantic pollock	Fish	Marine	7	11.9	8.9	Aquamaps
+Polydactylus sexfilis	Sixfinger threadfin	Fish	Both	24.1	29	27.9	Aquamaps
+Pomatomus saltatrix	Bluefish	Fish	Brackishwater	8.4	27.5	21.1	Aquamaps
+Porphyra columbina	Southern laver	Algae	Marine				
+Porphyra tenera	Nori	Algae	Marine				
+Portunus pelagicus	Blue swimming crab	Crustacean	Both	18.1	29	27.6	Aquamaps
+Portunus trituberculatus	Gazami crab	Crustacean	Marine	13.8	29.1	28	Aquamaps
+Psammoperca waigiensis	Waigieu seaperch	Fish	Brackishwater	24.7	29.3	28.4	Aquamaps
+Pseudocaranx dentex	White trevally	Fish	Marine	15.3	25.9	22.3	Aquamaps
+Pteria penguin	Penguin wing oyster	Mollusc	Marine	24.2	29.1	28	Aquamaps
+Pyura stolonifera	Red bait	Chordata	Marine	11.9	27.3	21.2	Aquamaps
+Rachycentron canadum	Cobia	Fish	Both	8.1	19.8	12.9	Aquamaps
+Rhabdosargus sarba	Gildlined seabream	Fish	Marine	21.9	29	28	Aquamaps
+Rhopilema esculentum	Flame jellyfish	Cnideria	Brackishwater				
+Ruditapes decussatus	Grooved carpet shell	Mollusc	Both	9.4	21.1	18.1	Aquamaps
+Ruditapes philippinarum	Japanese carpet shell	Mollusc	Both	15.7	29.1	28.2	Aquamaps
+Saccharina latissima	Sugar kelp	Algae	Marine				
+Saccostrea commercialis	Sydney cupped oyster	Mollusc	Marine				
+Saccostrea cuccullata	Hooded oyster	Mollusc	Marine	23.3	29.3	28.2	Aquamaps
+Salmo salar	Atlantic salmon	Fish	Both	1.5	15.3	9.3	Aquamaps
+Salmo trutta	Sea trout	Fish	Both	6.5	15.8	10.1	Aquamaps
+Salmo trutta fario	Brown trout	Fish					
+Salvelinus alpinus	Arctic char	Fish	Both	0.1	9.7	1.9	Aquamaps
+Sargassum fusiforme	Hijiki	Algae	Marine				
+Saxidomus gigantea	Butter clam	Mollusc	Marine	6.1	11.5	8.9	Aquamaps
+Scapharca cornea	Halfcrenated ark	Mollusc		17.6	29.2	28.3	Aquamaps
+Schedophilus ovalis	Imperial blackfish	Fish		11.8	18.8	14.8	Aquamaps
+Sciaena umbra	Brown meagre	Fish	Brackishwater	12.8	19.6	15.3	Aquamaps
+Sciaenops ocellatus	Red drum	Fish	Both	15.5	27.3	24.2	Aquamaps
+Scomber japonicus	Chub mackerel	Fish	Marine	9.3	27.7	20.7	Aquamaps
+Scophthalmus maximus	Turbot	Fish	Both	5.9	11.9	9.4	Aquamaps
+Scophthalmus rhombus	Brill	Fish	Brackishwater	8.4	19.5	11.2	Aquamaps
+Scrobicularia plana	Peppery furrow	Mollusc	Marine	8.2	18.8	11.3	Aquamaps
+Scylla olivacea	Orange mud crab	Crustacean	Brackishwater				
+Scylla paramamosain	Green mud crab	Crustacean	Brackishwater				
+Scylla serrata	Indo-Pacific swamp crab	Crustacean	Both	24.5	29.1	28.1	Aquamaps
+Sebastes schlegelii	Korean rockfish	Fish	Marine	8	21.3	17	Aquamaps
+Sepia officinalis	Common cuttlefish	Mollusc	Marine	8.4	19.7	11.3	Aquamaps
+Seriola dumerili	Greater amberjack	Fish	Marine	16.9	29	27.1	Aquamaps
+Seriola lalandi	Yellowtail amberjack	Fish	Brackishwater	9	23	14.9	Aquamaps
+Seriola quinqueradiata	Japanese amberjack	Fish	Marine				
+Seriola rivoliana	Longfin yellowtail	Fish	Marine	22.1	28.6	27.3	Aquamaps
+Siganus canaliculatus	White-spotted spinefoot	Fish	Marine	24.7	29.1	28.3	Aquamaps
+Siganus fuscescens	Mottled spinefoot	Fish	Marine	22.6	29	27.9	Aquamaps
+Siganus javus	Streaked spinefoot	Fish	Marine	25.5	29.1	28.3	Aquamaps
+Siganus lineatus	Gold-lined spinefoot	Fish	Marine	24.9	29	28	Aquamaps
+Siganus rivulatus	Marbled spinefoot	Fish	Marine	24.7	29.2	27.3	Aquamaps
+Siganus sutor	Shoemaker spinefoot	Fish		24.6	28.9	27.5	Aquamaps
+Sinonovacula constricta	Chinese razor clam	Mollusc	Marine	20.6	22.8	21.6	Aquamaps
+Solea senegalensis	Senegalese sole	Fish	Both	13.6	21.6	18.6	Aquamaps
+Solea solea	Common sole	Fish	Both	9	20	11.4	Aquamaps
+Sparidentex hasta	Sobaity seabream	Fish	Marine	25.4	27.9	26.8	Aquamaps
+Sparus aurata	Gilthead seabream	Fish	Both	12.1	21	17.8	Aquamaps
+Spirulina maxima		Algae	Brackishwater				
+Strombus gigas	Queen conch	Mollusc	Marine	25.3	28	27	Aquamaps
+Symphysanodon berryi	Slope bass	Fish	Marine	13	22.6	17.9	Aquamaps
+Synodus marchenae	Lizardfish	Fish					
+Takifugu rubripes	Japanese puffer	Fish	Marine	13.6	23	19	Aquamaps
+Tapes rhomboides		Mollusc					
+Tegillarca granosa	Granular ark	Mollusc	Marine	21.8	29.3	28.4	Aquamaps
+Thenus orientalis	Flathead lobster	Crustacean	Marine	25.4	29	28.1	Aquamaps
+Thunnus albacares	Yellowfin tuna	Fish	Marine	16.5	28.9	26.7	Aquamaps
+Thunnus maccoyii	Southern bluefin tuna	Fish	Marine	2.9	7.5	9	Aquamaps
+Thunnus orientalis	Pacific bluefin tuna	Fish	Marine	13.9	28.1	24.3	Aquamaps
+Thunnus thynnus	Atlantic bluefin tuna	Fish	Marine	7.5	24.7	12.6	Aquamaps
+Trachinotus blochii	Snubnose pompano	Fish	Both	24.8	29.3	28.4	Aquamaps
+Trachinotus carolinus	Florida pompano	Fish	Marine	23.3	28	25.6	Aquamaps
+Trachinotus ovatus	Pompano	Fish	Marine	9.8	17.3	13.9	Aquamaps
+Trachurus japonicus	Japanese jack mackerel	Fish	Marine	1.8	22	13.8	Aquamaps
+Tresus nuttallii	Pacific gaper	Mollusc	Marine	8.6	15.3	10.2	Aquamaps
+Tridacna crocea	Crocus giant clam	Mollusc	Marine	25.2	29.1	28.3	Aquamaps
+Tridacna derasa	Southern giant clam	Mollusc	Marine	24.7	29.3	28.6	Aquamaps
+Tridacna gigas	Giant clam	Mollusc	Marine	24.8	29.3	28.6	Aquamaps
+Tridacna maxima	Elongate giant clam	Mollusc	Marine	24.8	29.3	28.4	Aquamaps
+Tridacna squamosa	Fluted giant clam	Mollusc	Marine	25	29.3	28.4	Aquamaps
+Turbo cornutus	Horned turban	Mollusc	Marine	16.6	22.6	20.1	Aquamaps
+Turbo setosus	Rough turban	Mollusc	Marine	25.6	29.3	28.6	Aquamaps
+Umbrina cirrosa	Shi drum	Fish	Marine	13.3	21	18	Aquamaps
+Undaria pinnatifida	Wakame	Algae	Marine				
+Valamugil seheli	Bluespot mullet	Fish	Brackishwater	25.2	29.3	28.5	Aquamaps
+Venerupis aurea		Mollusc	Marine				
+Venerupis corrugata	Corrugated venus	Mollusc	Both	14.5	26.2	18.8	Aquamaps
+Venerupis rhomboides		Mollusc	Marine			12	SeaLifeBase
+Venus verrucosa	Warty venus	Mollusc	Marine	8.4	20.1	12.2	Aquamaps
+							
+							
+							
+							
+							
+							
+							
+							
