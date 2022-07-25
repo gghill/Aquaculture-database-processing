@@ -12,5 +12,5 @@ jobs:
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Mischief managed! Nice job **#**"
-        pr-message: "ERROR: EVERYTHING IS BROKEN! Just kidding, first pull in the books, noice."
+        issue-message: "Congrats on your first issue. Welcome to the team **#**, our bugs are your bugs now!"
+        pr-message: "ERROR: EVERYTHING IS BROKEN! Just kidding, first pull request in the books, noice."
