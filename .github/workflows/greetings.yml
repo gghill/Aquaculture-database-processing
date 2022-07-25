@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/first-interaction@v1
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token: ${{ secrets.ACTION_TOKEN }}
         issue-message: "Congrats on your first issue. Welcome to the team **#**, our bugs are your bugs now!"
         pr-message: "ERROR: EVERYTHING IS BROKEN! Just kidding, first pull request in the books, noice."
