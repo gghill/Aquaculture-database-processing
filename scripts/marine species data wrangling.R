@@ -281,6 +281,6 @@ plot_grid(a,b)
 # query different databases
 # downstream applications - practical
 # other database tools: rfishbase, raquamaps, spocc multi query
-# temperature data: robis pulls from BIO-Oracle which is long term averaged 2000-2014
+# temperature data: robis pulls from BIO-Oracle which is long term averaged 1995-2020
 
 
