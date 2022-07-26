@@ -83,7 +83,7 @@ guild_groups <- guilds %>% group_by(ID) %>% summarise(
 df <- head(df)
 dat <- df
 
-make_niches <- function(df) {
+make_niches <- function(df, n = 20) {
   ## prepare empty final data frame
   ## establish columns
   columns <- c("Species", "Min", "1stQ", "Median", "Mean", "3rdQ", "Max")
@@ -98,7 +98,11 @@ make_niches <- function(df) {
   for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
     tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
       occ <- occurrence(species)
-      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020),
+      if (nrow(occ) < n) { # this should skip the species if it has less than n occurrences
+        next
+      }
+      # filter to date range matching BIO-ORACLE and only presence records
+      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020 & occ$absence == FALSE),
                      c("scientificName", "sst")]
       occ_sum <- as.data.frame(summary(occ_sum))
       row <- c(species)
