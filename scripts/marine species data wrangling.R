@@ -66,7 +66,7 @@ guild_groups <- guilds %>% group_by(ID) %>% summarise(
 
 ## testing prior to implementation
 # tst <- occurrence("Macrocystis pyrifera")
-# tst_sst <- tst[,c("scientificName", "sst")]
+# tst_sst <- tst[which(occ$date_year >= 1995 & occ$date_year <= 2020),c("scientificName", "sst")]
 # tst_sum <- as.data.frame(summary(tst_sst))
 # species = "Macrocystis pyrifera"
 # target <- tst_sum[8:13,"Freq"]
@@ -98,7 +98,8 @@ make_niches <- function(df) {
   for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
     tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
       occ <- occurrence(species)
-      occ_sum <- occ[,c("scientificName", "sst")]
+      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020),
+                     c("scientificName", "sst")]
       occ_sum <- as.data.frame(summary(occ_sum))
       row <- c(species)
       target <- occ_sum[8:13,"Freq"] # prepare mini dataframe with predictably placed summary stats
