@@ -7,6 +7,7 @@ library(tidyr)
 library(dplyr)
 library(robis)
 
+checks <- read.delim("../input data/OBIS test marine species data.txt")
 # Thermal guilds from overlapping temp. ranges ---------------------------------
 dat <- read.delim("Marine species data.txt")
 df <- dat[,! colnames(dat) %in% c("Common.name","Farming.Environment","Temp.Ref")]
@@ -86,19 +87,29 @@ dat <- df
 make_niches <- function(df, n = 20) {
   ## prepare empty final data frame
   ## establish columns
+  file_name <- format(Sys.time(), "%b %d %X %Y")
+  log <- file(paste0("../output niches/logs/",file_name,".log"), open = 'a')
+  cat(file_name, " run messages","\n", file = log)
   columns <- c("Species", "Min", "1stQ", "Median", "Mean", "3rdQ", "Max")
   final_df <- data.frame(matrix(ncol = length(columns)))
   err <- c()
   colnames(final_df) <- columns
   prog <- 0
   db <- df$Species
-  startTime <- Sys.time()
   ## For-loop processing temperature summary
   
   for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
     tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
+      if (species %in% final_df$Species) { # skip duplicates
+        cat(paste0("\n","duplicate of ", species, " found and omitted from final dataset"), 
+            file = log, sep="\n")
+        next
+      }
+      cat(species)
       occ <- occurrence(species)
       if (nrow(occ) < n) { # this should skip the species if it has less than n occurrences
+        cat(paste("\n", "number of occurences less than threshold of", n, ",", species, "omitted from final dataset."), 
+            file = log, sep="\n")
         next
       }
       # filter to date range matching BIO-ORACLE and only presence records
@@ -114,17 +125,17 @@ make_niches <- function(df, n = 20) {
       final_df <- rbind(row, final_df)
       prog <- prog + 1
       # print status
-      cat(paste("\n", round((prog/length(db))*100),"% of species processed"))
-    }, error=function(e){cat("ERROR in:", species, "\n", conditionMessage(e), "\n")
+      cat(paste("\n", round((prog/length(db))*100),"% of species processed in final dataset"),
+          file = log, sep="\n")
+    }, error=function(e){cat("ERROR in:", species, "\n", conditionMessage(e), "\n", 
+                             file = log, sep="\n")
       err <- c(err,species)})
   }
   
-  write.csv(final_df, file = paste0(Sys.Date(),"_temp_niche.csv"))
-  Sys.sleep(1)
-  endTime <- Sys.time()
-  cat(paste0("\n Total run time: ", endTime - startTime))
+  write.csv(final_df, file = paste0("../output niches/",file_name,"_temp_niche.csv"))
 }
-
+# RUN ON CHECKS BEFORE PUSHING
+system.time({make_niches(checks)})
 make_niches(dat)
 
 # Run chunk all at once for occurence thermal niche loop ----
