@@ -65,18 +65,18 @@ guild_groups <- guilds %>% group_by(ID) %>% summarise(
 # Thermal niches from obis -----------------------------------------------------
 
 ## testing prior to implementation
-# tst <- occurrence("Macrocystis pyrifera")
-# tst_sst <- tst[which(occ$date_year >= 1995 & occ$date_year <= 2020),c("scientificName", "sst")]
-# tst_sum <- as.data.frame(summary(tst_sst))
-# species = "Macrocystis pyrifera"
-# target <- tst_sum[8:13,"Freq"]
+#tst <- occurrence("Tilapia guineensis")
+#tst_sst <- tst[which(tst$date_year >= 1995 & tst$date_year <= 2020 & tst$marine == TRUE),
+#                      c("scientificName", "sst")]
+#tst_sum <- as.data.frame(summary(tst_sst))
+#species = "Tilapia guineensis"
+#target <- tst_sum[8:13,"Freq"]
 # row <- c(species)
 # as.numeric(sub(".*:","",target))
 # for (stat in target) {
 #   add <- as.numeric(sub(".*:","",stat))
 #   row <- append(row, add)
 # }
-# spec_list <- c("Macrocystis pyrifera", "Saccharina latissima")
 
 # function to make thermal niches from a data frame with one column called "Species"
 # Returns "final_df" and writes to file as .csv
@@ -98,7 +98,8 @@ make_niches <- function(df) {
   for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
     tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
       occ <- occurrence(species)
-      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020),
+      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020 
+                           & occ$marine == TRUE),
                      c("scientificName", "sst")]
       occ_sum <- as.data.frame(summary(occ_sum))
       row <- c(species)
