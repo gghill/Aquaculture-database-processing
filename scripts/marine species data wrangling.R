@@ -138,42 +138,6 @@ make_niches <- function(df, n = 20) {
 system.time({make_niches(checks)})
 make_niches(dat)
 
-# Run chunk all at once for occurence thermal niche loop ----
-## prepare empty final data frame
-final_df <- rbind(row, final_df)
-## establish columns
-columns <- c("Species", "Min", "1stQ", "Median", "Mean", "3rdQ", "Max")
-final_df <- data.frame(matrix(ncol = length(columns)))
-colnames(final_df) <- columns
-prog <- 0
-db <- df$Species
-startTime <- Sys.time()
-## For-loop processing temperature summary
-
-for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
-  tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
-  occ <- occurrence(species)
-  occ_sum <- occ[,c("scientificName", "sst")]
-  occ_sum <- as.data.frame(summary(occ_sum))
-  row <- c(species)
-  target <- occ_sum[8:13,"Freq"] # prepare mini dataframe with predictably placed summary stats
-  for (stat in target) { # inner for-loop: take summary stats and extract only the values
-    add <- as.numeric(sub(".*:","",stat))
-    row <- append(row, add)
-  }
-  final_df <- rbind(row, final_df)
-  prog <- prog + 1
-  # print status
-  cat(paste("\n", round((prog/length(db))*100),"% of species processed", 
-            "\n Species just processed: ", species, "\n"))
-  }, error=function(e){cat("ERROR in:", species, "\n", conditionMessage(e), "\n")})
-}
-endTime <- Sys.time()
-cat(paste0("Total run time: ", endTime - startTime))
-
-# End run chunk ----
-
-
 
 # Next steps: 
 # wrap in function that takes first dataframe and the name of the
