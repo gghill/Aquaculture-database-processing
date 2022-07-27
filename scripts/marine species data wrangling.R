@@ -87,7 +87,7 @@ dat <- df
 make_niches <- function(df, n = 20) {
   ## prepare empty final data frame
   ## establish columns
-  file_name <- format(Sys.time(), "%b %d %X %Y")
+  file_name <- strftime(Sys.time(), "%m-%d-%y %H%M")
   log <- file(paste0("../output niches/logs/",file_name,".log"), open = 'a')
   cat(file_name, " run messages","\n", file = log)
   columns <- c("Species", "Min", "1stQ", "Median", "Mean", "3rdQ", "Max")
