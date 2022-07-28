@@ -11,7 +11,7 @@ checks <- read.delim("../input data/OBIS test marine species data.txt")
 # Thermal guilds from overlapping temp. ranges ---------------------------------
 dat <- read.delim("Marine species data.txt")
 df <- dat[,! colnames(dat) %in% c("Common.name","Farming.Environment","Temp.Ref")]
-df <- na.omit(df)
+# df <- na.omit(df)
 overlap <- function(A, B) {
   shared <- pmax(0, min(A[2], B[2]) - max(A[1], B[1]))
   max(shared / c(diff(A), diff(B)))
@@ -87,7 +87,7 @@ dat <- df
 make_niches <- function(df, n = 20) {
   ## prepare empty final data frame
   ## establish columns
-  file_name <- strftime(Sys.time(), "%m-%d-%y %H%M")
+  file_name <- strftime(Sys.time(), "%m-%d-%y_%H%M")
   log <- file(paste0("../output niches/logs/",file_name,".log"), open = 'a')
   cat(file_name, " run messages","\n", file = log)
   columns <- c("Species", "Min", "1stQ", "Median", "Mean", "3rdQ", "Max")
@@ -101,20 +101,22 @@ make_niches <- function(df, n = 20) {
   for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
     tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
       if (species %in% final_df$Species) { # skip duplicates
-        cat(paste0("\n","duplicate of ", species, " found and omitted from final dataset"), 
+        cat(paste0("\n","Duplicate of ", species, " found and omitted from final dataset"), 
             file = log, sep="\n")
         next
+      } else if (is.na(species) | species=="") {
+        next
       }
-      cat(species)
+      cat("\n", species, "\n")
       occ <- occurrence(species)
-      if (nrow(occ) < n) { # this should skip the species if it has less than n occurrences
-        cat(paste("\n", "number of occurences less than threshold of", n, ",", species, "omitted from final dataset."), 
-            file = log, sep="\n")
-        next
-      }
       # filter to date range matching BIO-ORACLE and only presence records
       occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020 & occ$absence == FALSE & occ$marine == TRUE),
                      c("scientificName", "sst")]
+      if (nrow(occ_sum) < n) { # this should skip the species if it has less than n occurrences
+        cat(paste("\n", "Number of occurences less than threshold of", n, ",", species, "omitted from final dataset."), 
+            file = log, sep="\n")
+        next
+      }
       occ_sum <- as.data.frame(summary(occ_sum))
       row <- c(species)
       target <- occ_sum[8:13,"Freq"] # prepare mini dataframe with predictably placed summary stats
@@ -122,7 +124,13 @@ make_niches <- function(df, n = 20) {
         add <- as.numeric(sub(".*:","",stat))
         row <- append(row, add)
       }
-      final_df <- rbind(row, final_df)
+      if (any(is.na(row))) {
+        cat(paste("\n", species, "summary contained NAs and was omitted from the final dataset"), 
+            file = log, sep="\n")
+        next
+      } else {
+        final_df <- rbind(row, final_df)
+      }
       prog <- prog + 1
       # print status
       cat(paste("\n", round((prog/length(db))*100),"% of species processed in final dataset"),
@@ -131,8 +139,8 @@ make_niches <- function(df, n = 20) {
                              file = log, sep="\n")
       err <- c(err,species)})
   }
-  
   write.csv(final_df, file = paste0("../output niches/",file_name,"_temp_niche.csv"))
+  closeAllConnections()
 }
 # RUN ON CHECKS BEFORE PUSHING
 system.time({make_niches(checks)})
