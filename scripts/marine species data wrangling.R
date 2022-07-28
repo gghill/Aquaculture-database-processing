@@ -7,6 +7,7 @@ library(tidyr)
 library(dplyr)
 library(robis)
 
+checks <- read.delim("../input data/OBIS test marine species data.txt")
 # Thermal guilds from overlapping temp. ranges ---------------------------------
 dat <- read.delim("Marine species data.txt")
 df <- dat[,! colnames(dat) %in% c("Common.name","Farming.Environment","Temp.Ref")]
@@ -83,23 +84,36 @@ guild_groups <- guilds %>% group_by(ID) %>% summarise(
 df <- head(df)
 dat <- df
 
-make_niches <- function(df) {
+make_niches <- function(df, n = 20) {
   ## prepare empty final data frame
   ## establish columns
+  file_name <- strftime(Sys.time(), "%m-%d-%y %H%M")
+  log <- file(paste0("../output niches/logs/",file_name,".log"), open = 'a')
+  cat(file_name, " run messages","\n", file = log)
   columns <- c("Species", "Min", "1stQ", "Median", "Mean", "3rdQ", "Max")
   final_df <- data.frame(matrix(ncol = length(columns)))
   err <- c()
   colnames(final_df) <- columns
   prog <- 0
   db <- df$Species
-  startTime <- Sys.time()
   ## For-loop processing temperature summary
   
   for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
     tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
+      if (species %in% final_df$Species) { # skip duplicates
+        cat(paste0("\n","duplicate of ", species, " found and omitted from final dataset"), 
+            file = log, sep="\n")
+        next
+      }
+      cat(species)
       occ <- occurrence(species)
-      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020 
-                           & occ$marine == TRUE),
+      if (nrow(occ) < n) { # this should skip the species if it has less than n occurrences
+        cat(paste("\n", "number of occurences less than threshold of", n, ",", species, "omitted from final dataset."), 
+            file = log, sep="\n")
+        next
+      }
+      # filter to date range matching BIO-ORACLE and only presence records
+      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020 & occ$absence == FALSE & occ$marine == TRUE),
                      c("scientificName", "sst")]
       occ_sum <- as.data.frame(summary(occ_sum))
       row <- c(species)
@@ -111,54 +125,18 @@ make_niches <- function(df) {
       final_df <- rbind(row, final_df)
       prog <- prog + 1
       # print status
-      cat(paste("\n", round((prog/length(db))*100),"% of species processed"))
-    }, error=function(e){cat("ERROR in:", species, "\n", conditionMessage(e), "\n")
+      cat(paste("\n", round((prog/length(db))*100),"% of species processed in final dataset"),
+          file = log, sep="\n")
+    }, error=function(e){cat("ERROR in:", species, "\n", conditionMessage(e), "\n", 
+                             file = log, sep="\n")
       err <- c(err,species)})
   }
   
-  write.csv(final_df, file = paste0(Sys.Date(),"_temp_niche.csv"))
-  Sys.sleep(1)
-  endTime <- Sys.time()
-  cat(paste0("\n Total run time: ", endTime - startTime))
+  write.csv(final_df, file = paste0("../output niches/",file_name,"_temp_niche.csv"))
 }
-
+# RUN ON CHECKS BEFORE PUSHING
+system.time({make_niches(checks)})
 make_niches(dat)
-
-# Run chunk all at once for occurence thermal niche loop ----
-## prepare empty final data frame
-final_df <- rbind(row, final_df)
-## establish columns
-columns <- c("Species", "Min", "1stQ", "Median", "Mean", "3rdQ", "Max")
-final_df <- data.frame(matrix(ncol = length(columns)))
-colnames(final_df) <- columns
-prog <- 0
-db <- df$Species
-startTime <- Sys.time()
-## For-loop processing temperature summary
-
-for (species in db) { # outer for loop: obtain occurrence, summarize, extract stats and add to final
-  tryCatch({ # catch errors without breaking the loop and print the error and species that caused it
-  occ <- occurrence(species)
-  occ_sum <- occ[,c("scientificName", "sst")]
-  occ_sum <- as.data.frame(summary(occ_sum))
-  row <- c(species)
-  target <- occ_sum[8:13,"Freq"] # prepare mini dataframe with predictably placed summary stats
-  for (stat in target) { # inner for-loop: take summary stats and extract only the values
-    add <- as.numeric(sub(".*:","",stat))
-    row <- append(row, add)
-  }
-  final_df <- rbind(row, final_df)
-  prog <- prog + 1
-  # print status
-  cat(paste("\n", round((prog/length(db))*100),"% of species processed", 
-            "\n Species just processed: ", species, "\n"))
-  }, error=function(e){cat("ERROR in:", species, "\n", conditionMessage(e), "\n")})
-}
-endTime <- Sys.time()
-cat(paste0("Total run time: ", endTime - startTime))
-
-# End run chunk ----
-
 
 
 # Next steps: 
