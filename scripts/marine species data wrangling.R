@@ -7,9 +7,11 @@ library(tidyr)
 library(dplyr)
 library(robis)
 
+rm(list=ls())
+
 checks <- read.delim("../input data/OBIS test marine species data.txt")
 # Thermal guilds from overlapping temp. ranges ---------------------------------
-dat <- read.delim("Marine species data.txt")
+dat <- read.delim("../input data/Marine species data.txt")
 df <- dat[,! colnames(dat) %in% c("Common.name","Farming.Environment","Temp.Ref")]
 # df <- na.omit(df)
 overlap <- function(A, B) {

@@ -1,0 +1,33 @@
+07-28-22_1608  run messages 
+
+ 9 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Crassostrea angulata omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Lutjanus goldiei omitted from final dataset.
+
+ 18 % of species processed in final dataset
+
+ 27 % of species processed in final dataset
+ERROR in:
+Acipenser nudiventris
+
+
+Can't subset columns that don't exist.
+[31mx[39m Column `sst` doesn't exist.
+
+
+
+ Number of occurences less than threshold of 20 , Oreochromis placidus omitted from final dataset.
+ERROR in:
+Siganus guttatus 
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+Duplicate of NA found and omitted from final dataset
+
+Duplicate of Palmaria palmata found and omitted from final dataset

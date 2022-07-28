@@ -6,7 +6,7 @@ Palaemon adspersus	Baltic prawn	Crustacean	Brackishwater	8.2	20.1	14.2	Aquamaps	
 Palmaria palmata	Dulse	Algae	Marine					duplicate record
 Acipenser nudiventris								singe occurence
 Oreochromis placidus	ninespine stickleback	Fish	Fresh					not marine
-Siganus guttatus 	Goldlined spinefoot	Fish			8	3.5	Aquamaps	"none, in final"
+Siganus guttatus	Goldlined spinefoot	Fish			8	3.5	Aquamaps	"none, in final"
 NA								is NA
 								is blank
 Palmaria palmata	Dulse	Algae	Marine					"large n, in final"
