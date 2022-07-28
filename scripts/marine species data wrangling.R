@@ -66,18 +66,18 @@ guild_groups <- guilds %>% group_by(ID) %>% summarise(
 # Thermal niches from obis -----------------------------------------------------
 
 ## testing prior to implementation
-# tst <- occurrence("Macrocystis pyrifera")
-# tst_sst <- tst[which(occ$date_year >= 1995 & occ$date_year <= 2020),c("scientificName", "sst")]
-# tst_sum <- as.data.frame(summary(tst_sst))
-# species = "Macrocystis pyrifera"
-# target <- tst_sum[8:13,"Freq"]
+#tst <- occurrence("Tilapia guineensis")
+#tst_sst <- tst[which(tst$date_year >= 1995 & tst$date_year <= 2020 & tst$marine == TRUE),
+#                      c("scientificName", "sst")]
+#tst_sum <- as.data.frame(summary(tst_sst))
+#species = "Tilapia guineensis"
+#target <- tst_sum[8:13,"Freq"]
 # row <- c(species)
 # as.numeric(sub(".*:","",target))
 # for (stat in target) {
 #   add <- as.numeric(sub(".*:","",stat))
 #   row <- append(row, add)
 # }
-# spec_list <- c("Macrocystis pyrifera", "Saccharina latissima")
 
 # function to make thermal niches from a data frame with one column called "Species"
 # Returns "final_df" and writes to file as .csv
@@ -113,7 +113,7 @@ make_niches <- function(df, n = 20) {
         next
       }
       # filter to date range matching BIO-ORACLE and only presence records
-      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020 & occ$absence == FALSE),
+      occ_sum <- occ[which(occ$date_year >= 1995 & occ$date_year <= 2020 & occ$absence == FALSE & occ$marine == TRUE),
                      c("scientificName", "sst")]
       occ_sum <- as.data.frame(summary(occ_sum))
       row <- c(species)
