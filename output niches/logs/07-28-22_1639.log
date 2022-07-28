@@ -1,0 +1,743 @@
+07-28-22_1639  run messages 
+
+ 0 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Acanthopagrus bifasciatus omitted from final dataset.
+
+ 1 % of species processed in final dataset
+
+ 1 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Acetes japonicus omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Acipenser stellatus omitted from final dataset.
+
+ 1 % of species processed in final dataset
+
+ 2 % of species processed in final dataset
+
+ Aliger gigas summary contained NAs and was omitted from the final dataset
+
+ Number of occurences less than threshold of 20 , Anadara broughtonii omitted from final dataset.
+
+ 2 % of species processed in final dataset
+
+ 2 % of species processed in final dataset
+
+ 2 % of species processed in final dataset
+
+ 3 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Anguilla bicolor bicolor omitted from final dataset.
+
+ 3 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Apostichopus japonicus omitted from final dataset.
+
+ Argopecten irradians summary contained NAs and was omitted from the final dataset
+
+ Number of occurences less than threshold of 20 , Argopecten ventricosus omitted from final dataset.
+
+ 3 % of species processed in final dataset
+
+ 4 % of species processed in final dataset
+
+ 4 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Artemia salina omitted from final dataset.
+
+ 4 % of species processed in final dataset
+
+ 5 % of species processed in final dataset
+
+ 5 % of species processed in final dataset
+
+ Bolbometopon muricatum summary contained NAs and was omitted from the final dataset
+
+ Number of occurences less than threshold of 20 , Boleophthalmus pectinirostris omitted from final dataset.
+
+ 5 % of species processed in final dataset
+
+ 5 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Capsosiphon fulvescens omitted from final dataset.
+
+ 6 % of species processed in final dataset
+
+ 6 % of species processed in final dataset
+
+ 6 % of species processed in final dataset
+
+ 7 % of species processed in final dataset
+
+ 7 % of species processed in final dataset
+
+ 7 % of species processed in final dataset
+
+ 8 % of species processed in final dataset
+
+ 8 % of species processed in final dataset
+
+ 8 % of species processed in final dataset
+
+ 9 % of species processed in final dataset
+
+ 9 % of species processed in final dataset
+
+ 9 % of species processed in final dataset
+
+ 9 % of species processed in final dataset
+
+ 10 % of species processed in final dataset
+
+ 10 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Chlamys farreri omitted from final dataset.
+
+ 10 % of species processed in final dataset
+
+ Chondracanthus chamissoi summary contained NAs and was omitted from the final dataset
+
+ Number of occurences less than threshold of 20 , Cladosiphon okamuranus omitted from final dataset.
+
+ 11 % of species processed in final dataset
+
+ 11 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Coregonus lavaretus omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Crassostrea angulata omitted from final dataset.
+ERROR in:
+Crassostrea belcheri
+
+
+Can't subset columns that don't exist.
+[31mx[39m Column `sst` doesn't exist.
+
+
+
+ Number of occurences less than threshold of 20 , Crassostrea corteziensis omitted from final dataset.
+
+ 11 % of species processed in final dataset
+ERROR in:
+Crassostrea iredalei
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ Number of occurences less than threshold of 20 , Crassostrea madrasensis omitted from final dataset.
+
+ 12 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Crassostrea rivularis omitted from final dataset.
+ERROR in:
+Crassostrea sikamea
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ Crassostrea tulipa summary contained NAs and was omitted from the final dataset
+
+ 12 % of species processed in final dataset
+
+ 12 % of species processed in final dataset
+
+ 12 % of species processed in final dataset
+
+ 13 % of species processed in final dataset
+
+ 13 % of species processed in final dataset
+
+ Dentex gibbosus summary contained NAs and was omitted from the final dataset
+
+ 13 % of species processed in final dataset
+
+ 14 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Dicentrarchus punctatus omitted from final dataset.
+
+ 14 % of species processed in final dataset
+
+ 14 % of species processed in final dataset
+
+ 15 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Dunaliella salina omitted from final dataset.
+ERROR in:
+E. fuscoguttatus x E. lanceolatus
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 15 % of species processed in final dataset
+
+ Emmelichthys nitidus summary contained NAs and was omitted from the final dataset
+
+ 15 % of species processed in final dataset
+
+ 16 % of species processed in final dataset
+
+ 16 % of species processed in final dataset
+
+ Epinephelus akaara summary contained NAs and was omitted from the final dataset
+
+ 16 % of species processed in final dataset
+
+ 16 % of species processed in final dataset
+
+ Epinephelus chlorostigma summary contained NAs and was omitted from the final dataset
+
+ 17 % of species processed in final dataset
+
+ 17 % of species processed in final dataset
+
+ 17 % of species processed in final dataset
+
+ 18 % of species processed in final dataset
+
+ 18 % of species processed in final dataset
+ERROR in:
+Epinephelus septumfasciatus
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 18 % of species processed in final dataset
+
+ 19 % of species processed in final dataset
+ERROR in:
+Euchema denticulatum
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 19 % of species processed in final dataset
+
+ Gelidium amansii summary contained NAs and was omitted from the final dataset
+
+ 19 % of species processed in final dataset
+ERROR in:
+Gomphina veneriformis
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 20 % of species processed in final dataset
+ERROR in:
+Gracilaria longissima
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 20 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Haliotis discus omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Haliotis diversicolor omitted from final dataset.
+
+ 20 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Haliotis midae omitted from final dataset.
+
+ 20 % of species processed in final dataset
+
+ 21 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Halocynthia roretzi omitted from final dataset.
+
+ 21 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Hiatula diphos omitted from final dataset.
+
+ Hippoglossus hippoglossus summary contained NAs and was omitted from the final dataset
+
+ Hippopus hippopus summary contained NAs and was omitted from the final dataset
+ERROR in:
+Holothuria scabra
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ Number of occurences less than threshold of 20 , Huso huso omitted from final dataset.
+
+ Kappaphycus alvarezii summary contained NAs and was omitted from the final dataset
+
+ 21 % of species processed in final dataset
+
+ 22 % of species processed in final dataset
+
+ 22 % of species processed in final dataset
+ERROR in:
+Larimichthys croceus
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ Number of occurences less than threshold of 20 , Larkinia grandis omitted from final dataset.
+
+ 22 % of species processed in final dataset
+
+ 23 % of species processed in final dataset
+ERROR in:
+Leteolabrax japonicus
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 23 % of species processed in final dataset
+ERROR in:
+Leukoma staminae
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 23 % of species processed in final dataset
+
+ 23 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Loxechinus albus omitted from final dataset.
+
+ 24 % of species processed in final dataset
+
+ 24 % of species processed in final dataset
+
+ 24 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Lutjanus goldiei omitted from final dataset.
+
+ 25 % of species processed in final dataset
+
+ 25 % of species processed in final dataset
+
+ 25 % of species processed in final dataset
+
+ Lutjanus purpureus summary contained NAs and was omitted from the final dataset
+
+ 26 % of species processed in final dataset
+
+ 26 % of species processed in final dataset
+
+ 26 % of species processed in final dataset
+
+ 27 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Mactra glabrata omitted from final dataset.
+
+ 27 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Magallana rivularis omitted from final dataset.
+
+ 27 % of species processed in final dataset
+
+ 27 % of species processed in final dataset
+
+ 28 % of species processed in final dataset
+
+ 28 % of species processed in final dataset
+
+ 28 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Meretrix lusoria omitted from final dataset.
+ERROR in:
+Meristotheca senegalense
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 29 % of species processed in final dataset
+
+ 29 % of species processed in final dataset
+
+ 29 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Metasepia tullbergi omitted from final dataset.
+
+ 30 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Miichthys miiuy omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Mizuhopecten yessoensis omitted from final dataset.
+
+ Monostroma nitidum summary contained NAs and was omitted from the final dataset
+ERROR in:
+Morone chrysops x M. saxatilis
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 30 % of species processed in final dataset
+
+ 30 % of species processed in final dataset
+
+ 30 % of species processed in final dataset
+
+ 31 % of species processed in final dataset
+
+ 31 % of species processed in final dataset
+
+ 31 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Mytilus chilensis omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Mytilus coruscus omitted from final dataset.
+
+ 32 % of species processed in final dataset
+
+ 32 % of species processed in final dataset
+
+ 32 % of species processed in final dataset
+
+ Mytilus platensis summary contained NAs and was omitted from the final dataset
+
+ 33 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Nodipecten subnodosus omitted from final dataset.
+ERROR in:
+Onchorhynchus tshawytscha
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 33 % of species processed in final dataset
+
+ 33 % of species processed in final dataset
+
+ 34 % of species processed in final dataset
+
+ 34 % of species processed in final dataset
+
+ 34 % of species processed in final dataset
+
+ 34 % of species processed in final dataset
+
+ 35 % of species processed in final dataset
+
+ 35 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Ostrea conchaphila omitted from final dataset.
+
+ 35 % of species processed in final dataset
+
+ 36 % of species processed in final dataset
+
+ 36 % of species processed in final dataset
+
+ 36 % of species processed in final dataset
+
+ 37 % of species processed in final dataset
+
+Duplicate of Pagrus auratus found and omitted from final dataset
+
+ 37 % of species processed in final dataset
+
+ 37 % of species processed in final dataset
+
+ 38 % of species processed in final dataset
+
+ 38 % of species processed in final dataset
+
+ 38 % of species processed in final dataset
+
+ 38 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Palaemonetes varians omitted from final dataset.
+
+ 39 % of species processed in final dataset
+
+ Panopea generosa summary contained NAs and was omitted from the final dataset
+
+ 39 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Panulirus japonicus omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Panulirus polyphagus omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Paphia gallus omitted from final dataset.
+
+ 39 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Paralichthys microps omitted from final dataset.
+
+ 40 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Patinopecten yessoensis omitted from final dataset.
+
+ 40 % of species processed in final dataset
+
+ 40 % of species processed in final dataset
+
+ 41 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Penaeus chinensis omitted from final dataset.
+
+ 41 % of species processed in final dataset
+
+ 41 % of species processed in final dataset
+
+ 41 % of species processed in final dataset
+
+ 42 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Penaeus merguiensis omitted from final dataset.
+
+ 42 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Penaeus penicillatus omitted from final dataset.
+
+ 42 % of species processed in final dataset
+
+ 43 % of species processed in final dataset
+
+ 43 % of species processed in final dataset
+
+ 43 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Penaeus stylirostris omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Penaeus vannamei omitted from final dataset.
+
+ 44 % of species processed in final dataset
+
+ 44 % of species processed in final dataset
+
+ 44 % of species processed in final dataset
+
+ 45 % of species processed in final dataset
+
+ 45 % of species processed in final dataset
+
+ 45 % of species processed in final dataset
+
+ 45 % of species processed in final dataset
+
+ 46 % of species processed in final dataset
+
+ 46 % of species processed in final dataset
+
+ 46 % of species processed in final dataset
+
+ 47 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Pleurogrammus azonus omitted from final dataset.
+
+ 47 % of species processed in final dataset
+
+ Polydactylus sexfilis summary contained NAs and was omitted from the final dataset
+
+ 47 % of species processed in final dataset
+
+ 48 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Porphyra tenera omitted from final dataset.
+
+ 48 % of species processed in final dataset
+
+ 48 % of species processed in final dataset
+
+ 48 % of species processed in final dataset
+
+ 49 % of species processed in final dataset
+
+ Pteria penguin summary contained NAs and was omitted from the final dataset
+
+ 49 % of species processed in final dataset
+
+ 49 % of species processed in final dataset
+
+ 50 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Rhopilema esculentum omitted from final dataset.
+
+ 50 % of species processed in final dataset
+
+ 50 % of species processed in final dataset
+
+ 51 % of species processed in final dataset
+ERROR in:
+Saccostrea commercialis
+
+
+Can't subset columns that don't exist.
+[31mx[39m Columns `scientificName` and `sst` don't exist.
+
+
+
+ 51 % of species processed in final dataset
+
+ 51 % of species processed in final dataset
+
+ 52 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Salmo trutta fario omitted from final dataset.
+
+ 52 % of species processed in final dataset
+
+ Sargassum fusiforme summary contained NAs and was omitted from the final dataset
+
+ 52 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Scapharca cornea omitted from final dataset.
+
+ 52 % of species processed in final dataset
+
+ 53 % of species processed in final dataset
+
+ 53 % of species processed in final dataset
+
+ 53 % of species processed in final dataset
+
+ 54 % of species processed in final dataset
+
+ 54 % of species processed in final dataset
+
+ 54 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Scylla olivacea omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Scylla paramamosain omitted from final dataset.
+
+ 55 % of species processed in final dataset
+
+ Sebastes schlegelii summary contained NAs and was omitted from the final dataset
+
+ 55 % of species processed in final dataset
+
+ 55 % of species processed in final dataset
+
+ 55 % of species processed in final dataset
+
+ Seriola quinqueradiata summary contained NAs and was omitted from the final dataset
+
+ 56 % of species processed in final dataset
+
+ 56 % of species processed in final dataset
+
+ 56 % of species processed in final dataset
+
+ 57 % of species processed in final dataset
+
+ 57 % of species processed in final dataset
+
+ 57 % of species processed in final dataset
+
+ 58 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Sinonovacula constricta omitted from final dataset.
+
+ Solea senegalensis summary contained NAs and was omitted from the final dataset
+
+ 58 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Sparidentex hasta omitted from final dataset.
+
+ 58 % of species processed in final dataset
+ERROR in:
+Spirulina maxima
+
+
+Can't subset columns that don't exist.
+[31mx[39m Column `sst` doesn't exist.
+
+
+
+ Strombus gigas summary contained NAs and was omitted from the final dataset
+
+ Symphysanodon berryi summary contained NAs and was omitted from the final dataset
+
+ Number of occurences less than threshold of 20 , Synodus marchenae omitted from final dataset.
+
+ Number of occurences less than threshold of 20 , Takifugu rubripes omitted from final dataset.
+
+ 59 % of species processed in final dataset
+
+ 59 % of species processed in final dataset
+
+ Thenus orientalis summary contained NAs and was omitted from the final dataset
+
+ 59 % of species processed in final dataset
+
+ 59 % of species processed in final dataset
+
+ 60 % of species processed in final dataset
+
+ 60 % of species processed in final dataset
+
+ 60 % of species processed in final dataset
+
+ 61 % of species processed in final dataset
+
+ 61 % of species processed in final dataset
+
+ 61 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Tresus nuttallii omitted from final dataset.
+
+ Tridacna crocea summary contained NAs and was omitted from the final dataset
+
+ Tridacna derasa summary contained NAs and was omitted from the final dataset
+
+ Tridacna gigas summary contained NAs and was omitted from the final dataset
+
+ 62 % of species processed in final dataset
+
+ 62 % of species processed in final dataset
+
+ Number of occurences less than threshold of 20 , Turbo cornutus omitted from final dataset.
+
+ 62 % of species processed in final dataset
+
+ Umbrina cirrosa summary contained NAs and was omitted from the final dataset
+
+ 62 % of species processed in final dataset
+
+ 63 % of species processed in final dataset
+
+ 63 % of species processed in final dataset
+
+ 63 % of species processed in final dataset
+
+ 64 % of species processed in final dataset
+
+ 64 % of species processed in final dataset
