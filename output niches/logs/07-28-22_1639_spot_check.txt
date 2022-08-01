@@ -1,0 +1,51 @@
+NAs:
+Argopecten irradians
+Bolbometopon muricatum			533, 8:13
+Chondracanthus chamissoi
+Crassostrea tulipa
+Dentex gibbosus
+Emmelichthys nitidus			3443, 8:13
+Epinephelus akaara
+Epinephelus chlorostigma
+Gelidium amansii			151, 8:13
+Hippoglossus hippoglossus
+Hippopus hippopus
+Kappaphycus alvarezii
+Lutjanus purpureus
+Monostroma nitidum
+Mytilus platens				Incorrect name, M. platensis, 154, 8:13
+Panopea generosa
+Polydactylus sexfilis
+Pteria penguin
+Sargassum fusiforme
+Sebastes schlegelii			54, 8:13
+Seriola quinqueradiata
+Solea senegalensis
+Strombus gigas				888, 8:13
+Symphysanodon berryi
+Thenus orientalis
+Tridacna crocea
+Tridacna derasa
+Tridacna gigas
+Umbrina cirrosa				435, 8:13
+
+
+ERROR in:
+Crassostrea belcheri			Magallana belcheri, error, 2 
+Crassostrea iredalei			Magallana bilineata, 39, 8:13
+Crassostrea sikamea			Magallana sikamea, error, 1
+E. fuscoguttatus x E. lanceolatus	Hybrid - no species name
+Epinephelus septumfasciatus		Hyporthodus septemfasciatus, 238, 8:13
+Euchema denticulatum			Eucheuma denticulatum, 82, 8:13
+Gomphina veneriformis			No records
+Gracilaria longissima			No records
+Holothuria scabra			Holothuria (Metriatyla) scabra, 437, 8:13
+Larimichthys croceus			Larimichthys crocea, 81, 8:13
+Leteolabrax japonicus			Lateolabrax, 176, 8:13
+Leukoma staminae			Leukoma staminea, 97, 8:13
+Meristotheca senegalense		Meristotheca senegalensis,no records
+Morone chrysops x M. saxatilis		Hybrid - no species name
+Onchorhynchus tshawytscha		Oncorhynchus tshawytscha, 69692, 8:13
+Saccostrea commercialis			Saccostrea glomerata, 440, 8:13
+Spirulina maxima			Limnospira maxima, error, 2
+Can't subset columns that don't exist.
