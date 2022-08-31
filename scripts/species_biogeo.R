@@ -12,7 +12,6 @@ library(leaflet)
 library(spocc)
 library(rgbif)
 library(scrubr)
-install.packages("qlcMatrix")
 library(qlcMatrix)
 library(CoordinateCleaner)
 library(terra)
@@ -25,31 +24,67 @@ library(geodata)
 my_species <- c("Penaeus vannamei", "Ruditapes philippinarum", "Salmo salar", "Chanos chanos", "Oncorhynchus mykiss", "Penaeus monodon", "Magallana gigas", "Anadara granosa", "Mytilus chilensis", "Apostichopus japonicus")
 
 
-spocc_data <- occ(my_species, from = c("gbif", "obis"), has_coords = TRUE)
+spocc_data <- occ(my_species, from = c("gbif", "obis"), limit = 10000, has_coords = TRUE)
 spocc_data
 
-#combines data into one data frame
-spocc_df <- occ2df(spocc_data)
-spocc_df
+# columns we actually want:
+interest <- c('species', 'longitude', 'latitude', 'prov', 'eventDate')
+final <- data.frame(matrix(ncol = length(interest), nrow = 0))
+colnames(final) <- interest
+# limit to databases of interest
+db <- c(spocc_data[['gbif']], spocc_data[['obis']])
+db <- db[c(2,4)]
 
-#names(occ)
-#spocc <- occ[,c("scientificName","sst","date_year","decimalLatitude", "decimalLongitude")]
-#spocc <- spocc[ which(spocc$date_year >= 1995 & spocc$date_year <= 2020), ]
+# combines data into one data frame with actual non-ambiguous species name
+for (j in db) {
+  for (i in j) {
+    
+    df <- as.data.frame(i)
+    df <- df[,names(df) %in% interest]
+    final <- rbind(df, final)
+  
+  }
+}
+spocc_df <- final
+summary(spocc_df)
+
+# spocc_df <- occ2df(spocc_data, what = 'all')
+# spocc_df
+
+# names(occ)
+# spocc <- occ[,c("scientificName","sst","date_year","decimalLatitude", "decimalLongitude")]
+# spocc <- spocc[ which(spocc$date_year >= 1995 & spocc$date_year <= 2020), ]
+
+# leaflet() %>%
+#   addTiles() %>%
+#   addCircles(data = subset(spocc_df, name == "Penaeus vannamei"), lng = ~ longitude, lat = ~ latitude, col = "blue") %>%
+#   addCircles(data = subset(spocc_df, name == "Ruditapes philippinarum"), lng = ~ longitude, lat = ~ latitude, col = "red") %>%
+#   addCircles(data = subset(spocc_df, name == "Salmo salar"), lng = ~ longitude, lat = ~ latitude, col = "green") %>%
+#   addCircles(data = subset(spocc_df, name == "Chanos chanos"), lng = ~ longitude, lat = ~ latitude, col = "yellow") %>%
+#   addCircles(data = subset(spocc_df, name == "Oncorhynchus mykiss"), lng = ~ longitude, lat = ~ latitude, col = "pink") %>%
+#   addCircles(data = subset(spocc_df, name == "Penaeus monodon"), lng = ~ longitude, lat = ~ latitude, col = "orange") %>%
+#   addCircles(data = subset(spocc_df, name == "Magallana gigas"), lng = ~ longitude, lat = ~ latitude, col = "purple") %>%
+#   addCircles(data = subset(spocc_df, name == "Anadara granosa"), lng = ~ longitude, lat = ~ latitude, col = "brown") %>%
+#   addCircles(data = subset(spocc_df, name == "Mytilus chilensis"), lng = ~ longitude, lat = ~ latitude, col = "black") %>%
+#   addCircles(data = subset(spocc_df, name == "Apostichopus japonicus"), lng = ~ longitude, lat = ~ latitude, col = "grey")
+# 
+
+# Map occurrence data to ensure every species is there (color automatically)
+# USE THIS FOR FUTURE PLOTS
+
+# bright magenta = NA
+pal <- colorFactor(
+  palette = "Set3",
+  na.color = 'magenta',
+  domain = my_species
+)
 
 leaflet() %>%
   addTiles() %>%
-  addCircles(data = subset(spocc_df, name == "Penaeus vannamei"), lng = ~ longitude, lat = ~ latitude, col = "blue") %>%
-  addCircles(data = subset(spocc_df, name == "Ruditapes philippinarum"), lng = ~ longitude, lat = ~ latitude, col = "red") %>%
-  addCircles(data = subset(spocc_df, name == "Salmo salar"), lng = ~ longitude, lat = ~ latitude, col = "green") %>%
-  addCircles(data = subset(spocc_df, name == "Chanos chanos"), lng = ~ longitude, lat = ~ latitude, col = "yellow") %>%
-  addCircles(data = subset(spocc_df, name == "Oncorhynchus mykiss"), lng = ~ longitude, lat = ~ latitude, col = "pink") %>%
-  addCircles(data = subset(spocc_df, name == "Penaeus monodon"), lng = ~ longitude, lat = ~ latitude, col = "orange") %>%
-  addCircles(data = subset(spocc_df, name == "Magallana gigas"), lng = ~ longitude, lat = ~ latitude, col = "purple") %>%
-  addCircles(data = subset(spocc_df, name == "Anadara granosa"), lng = ~ longitude, lat = ~ latitude, col = "brown") %>%
-  addCircles(data = subset(spocc_df, name == "Mytilus chilensis"), lng = ~ longitude, lat = ~ latitude, col = "black") %>%
-  addCircles(data = subset(spocc_df, name == "Apostichopus japonicus"), lng = ~ longitude, lat = ~ latitude, col = "grey")
+    addCircles(data = spocc_df, lng = ~ longitude, lat = ~ latitude, col = ~pal(species), popup = paste(spocc_df$species)) %>%
+  addLegend(position = 'bottomleft', pal = pal, values = my_species, title = 'Species', na.label = 'N/A')
+
   
-# Map occurrence data to ensure every species is there
 
 leaflet() %>%
   addTiles() %>%
