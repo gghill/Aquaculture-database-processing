@@ -69,8 +69,8 @@ summary(spocc_df)
 #   addCircles(data = subset(spocc_df, name == "Apostichopus japonicus"), lng = ~ longitude, lat = ~ latitude, col = "grey")
 # 
 
-# Map occurrence data to ensure every species is there (color automatically)
-# USE THIS FOR FUTURE PLOTS
+# Map occurrence data to ensure every species is there ----
+# USE THIS FOR FUTURE PLOTS (colors automatically)
 
 # bright magenta = NA
 pal <- colorFactor(
