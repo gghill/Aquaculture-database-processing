@@ -16,6 +16,9 @@ library(qlcMatrix)
 library(CoordinateCleaner)
 library(terra)
 library(geodata)
+library(sdmpredictors)
+library(raster)
+
 
 #### Occurrence data ####
 
@@ -27,8 +30,10 @@ my_species <- c("Penaeus vannamei", "Ruditapes philippinarum", "Salmo salar", "C
 spocc_data <- occ(my_species, from = c("gbif", "obis"), limit = 10000, has_coords = TRUE)
 spocc_data
 
+names(spocc_data$gbif$data[[1]])
+
 # columns we actually want:
-interest <- c('species', 'longitude', 'latitude', 'prov', 'eventDate')
+interest <- c('species', 'longitude', 'latitude', 'prov', 'eventDate', 'occurrenceStatus', 'countryCode', 'basisOfRecord')
 final <- data.frame(matrix(ncol = length(interest), nrow = 0))
 colnames(final) <- interest
 # limit to databases of interest
@@ -86,75 +91,91 @@ leaflet() %>%
 
   
 
-leaflet() %>%
-  addTiles() %>%
-  addCircles(data = subset(spocc, scientificName == "Penaeus vannamei"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "blue") %>%
-  addCircles(data = subset(spocc, scientificName == "Ruditapes philippinarum"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "red") %>%
-  addCircles(data = subset(spocc, scientificName == "Salmo salar"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "green") %>%
-  addCircles(data = subset(spocc, scientificName == "Chanos chanos"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "yellow") %>%
-  addCircles(data = subset(spocc, scientificName == "Oncorhynchus mykiss"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "pink") %>%
-  addCircles(data = subset(spocc, scientificName == "Penaeus monodon"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "orange") %>%
-  addCircles(data = subset(spocc, scientificName == "Magallana gigas"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "purple") %>%
-  addCircles(data = subset(spocc, scientificName == "Anadara granosa"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "brown") %>%
-  addCircles(data = subset(spocc, scientificName == "Mytilus chilensis"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "black") %>%
-  addCircles(data = subset(spocc, scientificName == "Apostichopus japonicus"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "grey")
-
 #### Cleaning data ####
 
-spocc <- occ[ which(spocc$date_year >= 1995 & spocc$date_year <= 2020), ]
+#spocc <- occ[ which(spocc$date_year >= 1995 & spocc$date_year <= 2020), ]
+nrow(spocc_df)
 
-names(spocc)
-unique(spocc$occurrenceStatus) 
+# remove other records
+unique(spocc_df$basisOfRecord)
+occ_clean <- subset(spocc_df, !(basisOfRecord %in% c("PreservedSpecimen", "D", "DerivedFromLiterature", "MaterialSample", "NomenclaturalChecklist" , "FossilSpecimen", "MATERIAL_SAMPLE", "PRESERVED_SPECIMEN", "MATERIAL_CITATION", "FOSSIL_SPECIMEN"))) 
 
 # keep only presence data
-occ_clean <- subset(spocc, !(occurrenceStatus %in% NA)) 
+occ_clean <- subset(spocc_df, !(occurrenceStatus %in% c("ABSENT", NA))) 
 
 # remove NA coordinates
-occ_clean <- subset(occ_clean, !is.na(decimalLatitude) & !is.na(decimalLongitude))
+occ_clean <- subset(occ_clean, !is.na(latitude) & !is.na(longitude))
 nrow(occ_clean)
 
 # remove duplicates
-dups <- which(duplicated(occ_clean[ , c("decimalLongitude", "decimalLatitude")]))
+dups <- which(duplicated(occ_clean[ , c("longitude", "latitude")]))
 length(dups)
 if (length(dups) > 0)  occ_clean <- occ_clean[-dups, ]
 nrow(occ_clean)
 
 # remove lat and long that are zero
-occ_clean <- subset(occ_clean, !(decimalLatitude == 0 & decimalLongitude == 0))
+occ_clean <- subset(occ_clean, !(latitude == 0 & longitude == 0))
 nrow(occ_clean)
 
 # do some automatic data cleaning with functions of the 'scrubr' package:
-
-?coord_incomplete
-
 occ_clean <- coord_incomplete(coord_imprecise(coord_impossible(coord_unlikely(occ_clean))))
 nrow(occ_clean)
 
-#remove 
-unique(spocc$basisOfRecord) 
-occ_clean2 <- subset(occ_clean, !(basisOfRecord %in% c("PreservedSpecimen", "DerivedFromLiterature", "MaterialSample", "D", "FossilSpecimen", "NomenclaturalChecklist")))
+pal <- colorFactor(
+  palette = "Set3",
+  na.color = 'magenta',
+  domain = my_species
+)
 
 leaflet() %>%
   addTiles() %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Penaeus vannamei"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "blue") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Ruditapes philippinarum"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "red") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Salmo salar"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "green") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Chanos chanos"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "yellow") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Oncorhynchus mykiss"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "pink") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Penaeus monodon"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "orange") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Magallana gigas"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "purple") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Anadara granosa"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "brown") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Mytilus chilensis"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "black") %>%
-  addCircles(data = subset(occ_clean2, scientificName == "Apostichopus japonicus"), lng = ~ decimalLongitude, lat = ~ decimalLatitude, col = "grey")
+  addCircles(data = occ_clean, lng = ~ longitude, lat = ~ latitude, col = ~pal(species), popup = paste(occ_clean$species)) %>%
+  addLegend(position = 'bottomleft', pal = pal, values = my_species, title = 'Species', na.label = 'N/A')
 
-names(occ_clean)
+# more automatic data cleaning
+occ_coordclean <- clean_coordinates(occ_clean, lon = "longitude", lat = "latitude", countries = "countryCode", tests = c("centroids", "equal", "institutions", "outliers", "zeros"), inst_rad = 100, zeros_rad = 1, outliers_method = "quantile")
+
+head(occ_coordclean)
+
+leaflet() %>%
+  addTiles() %>%
+  addCircles(data = occ_coordclean, lng = ~ longitude, lat = ~ latitude, col = ~pal(species), popup = paste(occ_coordclean$species)) %>%
+  addLegend(position = 'bottomleft', pal = pal, values = my_species, title = 'Species', na.label = 'N/A')
+
+nrow(occ_clean)
+occ_clean <- occ_clean[occ_coordclean$.summary == TRUE, ]
+nrow(occ_clean)
+
+# remove coordinates outside region of interest
+library(rgdal)
+library(raster)
+library(ggplot2)
+library(rgeos)
+
+download.file("http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip", 
+              destfile = 'oceans.zip')
+
+unzip(zipfile = "oceans.zip", 
+      exdir = 'ne-ocean-10m')
+oceans <- readOGR("ne-ocean-10m/ne_10m_ocean.shp")
+class(oceans)
+crs(oceans)
+
+#Map again
+pal <- colorFactor(
+  palette = "Set3",
+  na.color = 'magenta',
+  domain = my_species
+)
+
+leaflet() %>%
+  addTiles() %>%
+  addCircles(data = occ_clean, lng = ~ longitude, lat = ~ latitude, col = ~pal(species), popup = paste(occ_clean$species)) %>%
+  addLegend(position = 'bottomleft', pal = pal, values = my_species, title = 'Species', na.label = 'N/A')
 
 ## Next Steps:
-# clean data - remove inland and repeat occurrences
-# clean data for each species rather than as a group??????
-# add gbif data?
+# clean data - remove inland points
 # map according to country or separate species to minimise overlap - random so no overlap or by classification?
 # add legend 
 # do the same for algae?
-# fuzzy occurrences per species - too many figures?
 
