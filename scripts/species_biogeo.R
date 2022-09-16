@@ -22,9 +22,10 @@ library(raster)
 
 #### Occurrence data ####
 
-#my_species <- c("Penaeus vannamei", "Ruditapes philippinarum")   #test
+# will want to rerun with a full my_species, remove code referencing seaweed specifically
+my_species <- c("Saccharina japonica", "Saccharina latissima")   #test
 
-my_species <- c("Penaeus vannamei", "Ruditapes philippinarum", "Salmo salar", "Chanos chanos", "Oncorhynchus mykiss", "Penaeus monodon", "Magallana gigas", "Anadara granosa", "Mytilus chilensis", "Apostichopus japonicus")
+# my_species <- c("Penaeus vannamei", "Ruditapes philippinarum", "Salmo salar", "Chanos chanos", "Oncorhynchus mykiss", "Penaeus monodon", "Magallana gigas", "Anadara granosa", "Mytilus chilensis", "Apostichopus japonicus")
 
 
 spocc_data <- occ(my_species, from = c("gbif", "obis"), limit = 10000, has_coords = TRUE)
@@ -101,7 +102,7 @@ unique(spocc_df$basisOfRecord)
 occ_clean <- subset(spocc_df, !(basisOfRecord %in% c("PreservedSpecimen", "D", "DerivedFromLiterature", "MaterialSample", "NomenclaturalChecklist" , "FossilSpecimen", "MATERIAL_SAMPLE", "PRESERVED_SPECIMEN", "MATERIAL_CITATION", "FOSSIL_SPECIMEN"))) 
 
 # keep only presence data
-occ_clean <- subset(spocc_df, !(occurrenceStatus %in% c("ABSENT", NA))) 
+occ_clean <- subset(occ_clean, !(occurrenceStatus %in% c("ABSENT", NA))) 
 
 # remove NA coordinates
 occ_clean <- subset(occ_clean, !is.na(latitude) & !is.na(longitude))
@@ -137,11 +138,6 @@ occ_coordclean <- clean_coordinates(occ_clean, lon = "longitude", lat = "latitud
 
 head(occ_coordclean)
 
-leaflet() %>%
-  addTiles() %>%
-  addCircles(data = occ_coordclean, lng = ~ longitude, lat = ~ latitude, col = ~pal(species), popup = paste(occ_coordclean$species)) %>%
-  addLegend(position = 'bottomleft', pal = pal, values = my_species, title = 'Species', na.label = 'N/A')
-
 nrow(occ_clean)
 occ_clean <- occ_clean[occ_coordclean$.summary == TRUE, ]
 nrow(occ_clean)
@@ -151,31 +147,57 @@ library(rgdal)
 library(raster)
 library(ggplot2)
 library(rgeos)
+library(sf)
+sf_use_s2(FALSE)
 
-download.file("http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip", 
-              destfile = 'oceans.zip')
 
-unzip(zipfile = "oceans.zip", 
-      exdir = 'ne-ocean-10m')
+# download.file("http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip", 
+#               destfile = 'oceans.zip')
+# 
+# unzip(zipfile = "oceans.zip", 
+#       exdir = 'ne-ocean-10m')
 oceans <- readOGR("ne-ocean-10m/ne_10m_ocean.shp")
 class(oceans)
 crs(oceans)
 
+oceans <- st_as_sf(oceans)
+oceans_clean <- oceans[1,"min_zoom"]
+# points <- occ_clean[occ_clean$species=="Salmo salar",]
+points <- subset(occ_clean, select = c("latitude", "longitude", "species"))
+points <- st_as_sf(points, coords = c("longitude", "latitude"), crs = 4326)
+# 1 = in ocean, 0 = on land
+points_plot <- points %>% mutate(in_ocean = lengths(st_within(points, oceans_clean)))
+
+
+st_write(points_plot, paste0('points_plot',strftime(Sys.time(), "%m-%d-%y_%H%M"),'.shp'))
+# pushover(message = "Mischief managed") # feel free to use if you have pushover configured
+seaweed <- points_plot[points_plot$in_ocean==1,]
+
+# STOP HERE AND APPEND #
+points_ocean <- points_plot[points_plot$in_ocean==1,]
+# addressing synonymous name
+points_ocean$species[which(points_ocean$species == 'Tegillarca granosa')] <- 'Anadara granosa'
+
+points_ocean <- rbind(points_ocean,seaweed)
+
 #Map again
+library(viridis)
+my_species <- unique(points_ocean$species)
 pal <- colorFactor(
-  palette = "Set3",
+  palette = viridis(length(unique(points_ocean$species))),
   na.color = 'magenta',
   domain = my_species
 )
 
-leaflet() %>%
+leaflet(st_transform(points_ocean,4326)) %>%
   addTiles() %>%
-  addCircles(data = occ_clean, lng = ~ longitude, lat = ~ latitude, col = ~pal(species), popup = paste(occ_clean$species)) %>%
-  addLegend(position = 'bottomleft', pal = pal, values = my_species, title = 'Species', na.label = 'N/A')
+  addCircleMarkers(col = ~pal(species), stroke = FALSE, radius = 2, fillOpacity = 1, popup = paste(points_ocean$species)) %>%
+  addLegend(position = 'topright', pal = pal, values = my_species, title = 'Species', na.label = 'N/A')
 
 ## Next Steps:
-# clean data - remove inland points
 # map according to country or separate species to minimise overlap - random so no overlap or by classification?
-# add legend 
 # do the same for algae?
+# generalize approach to deal with synonymous names - check unique species matches length of my_species
+
+
 
